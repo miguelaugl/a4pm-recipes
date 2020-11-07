@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "email": "admin@receitas.com.br",
+      "password": "admin"
+    },
+    {
+      "name": "Miguel",
+      "email": "miguelaugl@outlook.com",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bolos e tortas doces"
+    },
+    {
+      "id": 2,
+      "name": "Carnes"
+    },
+    {
+      "id": 3,
+      "name": "Aves"
+    },
+    {
+      "id": 4,
+      "name": "Peixes"
+    },
+    {
+      "id": 5,
+      "name": "Saladas, molhos e acompanhamentos"
+    },
+    {
+      "id": 6,
+      "name": "Sopas"
+    },
+    {
+      "id": 7,
+      "name": "Massas"
+    },
+    {
+      "id": 8,
+      "name": "Bebidas"
+    },
+    {
+      "id": 9,
+      "name": "Doces e sobremesas"
+    },
+    {
+      "id": 10,
+      "name": "Lanches"
+    },
+    {
+      "id": 11,
+      "name": "Prato único"
+    },
+    {
+      "id": 12,
+      "name": "Light"
+    },
+    {
+      "id": 13,
+      "name": "Alimentação saudável"
+    }
+  ]
+}

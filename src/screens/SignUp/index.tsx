@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import logoImg from '../../assets/full-logo.png';
 import signUpBackground from '../../assets/sign-up-background.jpg';
+import api from '../../services/api';
 
 import {
   Container,
@@ -22,6 +23,22 @@ const SignUp: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
 
+  async function handleRegisterClick() {
+    if (password !== confirmPassword) {
+      return;
+    }
+
+    const user = {
+      name,
+      email,
+      password,
+    };
+
+    console.log(await api.get('/users'));
+
+    await api.post('/users', user);
+  }
+
   return (
     <Container source={signUpBackground} blurRadius={2}>
       <Logo source={logoImg} />
@@ -38,6 +55,7 @@ const SignUp: React.FC = () => {
         onChangeText={(value) => setEmail(value)}
         placeholder="e-mail"
         placeholderTextColor="#000"
+        autoCompleteType="email"
       />
 
       <Input
@@ -45,6 +63,7 @@ const SignUp: React.FC = () => {
         onChangeText={(value) => setPassword(value)}
         placeholder="senha"
         placeholderTextColor="#000"
+        secureTextEntry={true}
       />
 
       <Input
@@ -52,9 +71,10 @@ const SignUp: React.FC = () => {
         onChangeText={(value) => setConfirmPassword(value)}
         placeholder="repetir senha"
         placeholderTextColor="#000"
+        secureTextEntry={true}
       />
 
-      <Login>
+      <Login onPress={handleRegisterClick}>
         <LoginText>Cadastrar</LoginText>
       </Login>
 
