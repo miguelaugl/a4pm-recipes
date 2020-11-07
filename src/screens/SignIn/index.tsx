@@ -21,7 +21,7 @@ const SignIn: React.FC = () => {
   const [password, setPassword] = useState<string>('');
 
   return (
-    <Container source={signInBackground}>
+    <Container source={signInBackground} blurRadius={2}>
       <Logo source={logoImg} />
 
       <Input

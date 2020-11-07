@@ -13,7 +13,7 @@ export const Logo = styled.Image.attrs(() => ({
 }))`
   width: 100%;
   margin: 80px 0;
-  height: 100px;
+  height: 80px;
 `;
 
 export const Input = styled.TextInput`
